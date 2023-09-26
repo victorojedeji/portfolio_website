@@ -17,16 +17,18 @@ import {
   BiLogoTailwindCss,
   BiLogoRedux,
 } from "react-icons/bi";
-
-import profileAvatar from "../../assets/profile_gif.gif";
-import profilePic from "../../assets/profile_pic.jpg";
-
 import { BiLogoGmail, BiLogoReact } from "react-icons/bi";
 import { FaBootstrap } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
+
+import profileAvatar from "../../assets/profile_gif.gif";
+import profilePic from "../../assets/profile_pic.jpg";
+
 import { HashLink as HLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import Carousel from "../../components/Carousel";
+
 
 export default function HomePage() {
   const scrollDown = () => {
@@ -143,13 +145,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="portfolio">
+      <section className="mb-24" id="portfolio">
         <div>
-          <h1 className="text-4xl font-bold whitespace-nowrap text-center">
+          <h1 className="text-4xl font-bold whitespace-nowrap text-center mb-16">
             Portfolio
           </h1>
 
-          <div></div>
+          <div className="w-full">
+              <Carousel />
+          </div>
+
         </div>
       </section>
 
