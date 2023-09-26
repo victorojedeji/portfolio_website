@@ -19,7 +19,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative h-[60vh] overflow-hidden">
+    <div className="relative h-[60vh] overflow-hidden mx-auto">
       <AnimatePresence initial={false} custom={currentIndex}>
         <motion.div
           key={currentIndex}
@@ -50,6 +50,7 @@ const Carousel = () => {
               </a>
               <a
                 href={projects[currentIndex].websiteUrl}
+                target="_blank"
                 className="ml-4 text-blue-500 hover:underline cursor-pointer"
               >
                 Website

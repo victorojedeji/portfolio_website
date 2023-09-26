@@ -21,14 +21,12 @@ import { BiLogoGmail, BiLogoReact } from "react-icons/bi";
 import { FaBootstrap } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
-
 import profileAvatar from "../../assets/profile_gif.gif";
 import profilePic from "../../assets/profile_pic.jpg";
 
 import { HashLink as HLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel";
-
 
 export default function HomePage() {
   const scrollDown = () => {
@@ -40,7 +38,7 @@ export default function HomePage() {
   return (
     <section className="px-8 md:px-48 bg-neutral-100">
       <section
-        className="flex flex-col lg:flex-row items-center h-[90vh] w-full relative mb-16"
+        className="flex flex-col lg:flex-row items-center justify-center h-[80vh] w-full relative mb-16"
         id="hero"
       >
         <HLink to="#about_me">
@@ -56,18 +54,18 @@ export default function HomePage() {
         </HLink>
         <div className="flex items-center justify-center lg:justify-between py-12 lg:py-24 w-[100%] lg:w[50%]">
           <div className="mr-8 lg:mr-24">
-            <Link>
+            <a href="https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav" target="_blank">
               <BsLinkedin className="mb-4 text lg:text-2xl" />
-            </Link>
-            <Link>
+            </a>
+            <a href="https://github.com/victorojedeji" target="_blank">
               <BsGithub className="mb-4 text lg:text-2xl" />
-            </Link>
-            <Link>
+            </a>
+            <a href="https://twitter.com/Hack_Bishop" target="_blank">
               <RiTwitterXLine className="mb-4 text lg:text-2xl" />
-            </Link>
-            <Link>
+            </a>
+            <a href="https://hashnode.com/@t0mi" target="_blank">
               <SiHashnode className="mb-4 text lg:text-2xl" />
-            </Link>
+            </a>
           </div>
 
           <div className="">
@@ -152,9 +150,8 @@ export default function HomePage() {
           </h1>
 
           <div className="w-full">
-              <Carousel />
+            <Carousel />
           </div>
-
         </div>
       </section>
 
