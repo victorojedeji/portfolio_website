@@ -21,23 +21,33 @@ import {
 import profileAvatar from "../../assets/profile_gif.gif";
 import profilePic from "../../assets/profile_pic.jpg";
 
-import { Link } from "react-router-dom";
 import { BiLogoGmail, BiLogoReact } from "react-icons/bi";
 import { FaBootstrap } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
+import {HashLink as HLink} from 'react-router-hash-link'
+import { Link } from "react-router-dom";
+
+
 export default function HomePage() {
+
+  const scrollDown = () => {
+    window.scrollTo({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <section className="px-8 md:px-48 bg-neutral-100">
-      <section className="flex flex-col lg:flex-row items-center h-[90vh] w-full relative mb-16">
-        <Link to='#about_me'>
-          <div className="flex flex-col justify-center items-center mr-8 py-4 px-4 absolute bottom-0 right-0">
+      <section className="flex flex-col lg:flex-row items-center h-[90vh] w-full relative mb-16" id="hero">
+        <HLink to='#about_me'>
+          <div className="flex flex-col justify-center items-center mr-8 py-4 px-4 absolute bottom-0 right-0" onClick={scrollDown}>
             <BsArrowDown className="text-2xl font-bold" />
             <span className="whitespace-nowrap text-sm font-bold">
               scroll down
             </span>
           </div>
-        </Link>
+        </HLink>
         <div className="flex items-center justify-center lg:justify-between py-12 lg:py-24 w-[100%] lg:w[50%]">
           <div className="mr-8 lg:mr-24">
             <Link>
@@ -61,12 +71,12 @@ export default function HomePage() {
 
             <h3 className="text-2xl">Software Developer</h3>
             <p className="text-base">Passionate Frontend Web Developer </p>
-            <Link to="#contact">
+            <HLink to="#contact">
               <button className="bg-neutral-700 text-white mt-4 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
                 <span className="text-md">Hire me</span>
                 <BsArrowUpRight />
               </button>
-            </Link>
+            </HLink>
           </div>
         </div>
 
@@ -123,7 +133,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* <section>
+      {/* <section id='portfolio'>
         <div>
           <h1 className="text-4xl font-bold whitespace-nowrap text-center">
             Portfolio
@@ -135,7 +145,7 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      <section className="mb-24 ">
+      <section className="mb-24 " id="skills">
         <h1 className="text-4xl font-bold whitespace-nowrap text-center">
           Skills
         </h1>
