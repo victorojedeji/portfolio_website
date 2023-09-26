@@ -28,16 +28,16 @@ import { TbBrandNextjs } from "react-icons/tb";
 
 export default function HomePage() {
   return (
-    <section className="px-48 bg-neutral-100">
-      <section className="flex items-center h-[90vh] w-full relative">
+    <section className="px-8 md:px-48 bg-neutral-100">
+      <section className="flex flex-col lg:flex-row items-center h-[90vh] w-full relative">
         <div className="flex flex-col justify-center items-center mr-8 py-4 px-4 absolute bottom-0 right-0">
           <BsArrowDown className="text-2xl font-bold" />
           <span className="whitespace-nowrap text-sm font-bold">
             scroll down
           </span>
         </div>
-        <div className="flex items-center justify-between py-24 w-[50%]">
-          <div className="mr-24">
+        <div className="flex items-center justify-center lg:justify-between py-24 w-[100%] lg:w[50%]">
+          <div className="mr-4 lg:mr-24">
             <Link>
               <BsLinkedin className="mb-4 text-2xl" />
             </Link>
@@ -117,17 +117,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <div>
           <h1 className="text-4xl font-bold whitespace-nowrap text-center">
             Portfolio
           </h1>
 
           <div>
-            
+
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="mb-24">
         <h1 className="text-4xl font-bold whitespace-nowrap text-center">
