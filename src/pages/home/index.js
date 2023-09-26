@@ -348,7 +348,7 @@ export default function HomePage() {
                   Proposal
                 </label>
                 <textarea
-                  class="w-full py-2 px-3 border border-gray-300 rounded bg-transparent focus:outline-none"
+                  class="w-full py-2 px-3 border border-gray-300 rounded bg-transparent focus:outline-none resize-none"
                   name="project"
                   id="project"
                   cols="30"

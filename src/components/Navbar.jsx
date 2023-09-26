@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header className="w-full min-h-[80px] flex items-center px-8 md:px-48 py-2">
       {/* <img src="" alt="Victor ojedeji" /> */}
-      <h1 className="flex items-center">
+      <h1 className="flex items-center font-bold">
         Victor <span className="ml-2">Ojedeji</span>.
       </h1>
 
