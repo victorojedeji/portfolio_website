@@ -261,7 +261,7 @@ export default function HomePage() {
           Contact Me
         </h5>
 
-        <div className="w-full flex-col lg:flex-row gap-8 mt-16">
+        <div className="w-full flex flex-col lg:flex-row gap-8 mt-16">
           <div className="w-[100%] lg:w-[50%]">
             <h3 className="text-center text-2xl">Talk to me</h3>
 
@@ -295,7 +295,7 @@ export default function HomePage() {
 
             <form class="max-w-md mx-auto mt-4 p-4 rounded-lg">
               <div class="mb-4 relative">
-                <label class="block mb-2" for="name">
+                <label class=" mb-2" for="name">
                   Name
                 </label>
                 <input
@@ -308,7 +308,7 @@ export default function HomePage() {
               </div>
 
               <div class="mb-4 relative">
-                <label class="block mb-2" for="email">
+                <label class=" mb-2" for="email">
                   Email
                 </label>
                 <input
@@ -321,7 +321,7 @@ export default function HomePage() {
               </div>
 
               <div class="mb-4 relative">
-                <label class="block mb-2" for="project">
+                <label class=" mb-2" for="project">
                   Proposal
                 </label>
                 <textarea
