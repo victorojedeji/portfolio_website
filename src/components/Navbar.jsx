@@ -42,11 +42,11 @@ export default function Navbar() {
         <div className="h-full relative flex items-center justify-center">
           <AiOutlineClose className="absolute top-4 right-4 text-3xl" onClick={closeNav} />
           <ul className="capitalize">
-            <li className="mb-2 text-3xl">Home</li>
-            <li className="mb-2 text-3xl">About</li>
-            <li className="mb-2 text-3xl">Portfolio</li>
-            <li className="mb-2 text-3xl">skills</li>
-            <li className="mb-2 text-3xl">Contact</li>
+            <li className="mb-4 text-3xl">Home</li>
+            <li className="mb-4 text-3xl">About</li>
+            <li className="mb-4 text-3xl">Portfolio</li>
+            <li className="mb-4 text-3xl">skills</li>
+            <li className="mb-4 text-3xl">Contact</li>
           </ul>
         </div>
       </nav>)}

@@ -29,44 +29,48 @@ import { TbBrandNextjs } from "react-icons/tb";
 export default function HomePage() {
   return (
     <section className="px-8 md:px-48 bg-neutral-100">
-      <section className="flex flex-col lg:flex-row items-center h-[90vh] w-full relative">
-        <div className="flex flex-col justify-center items-center mr-8 py-4 px-4 absolute bottom-0 right-0">
-          <BsArrowDown className="text-2xl font-bold" />
-          <span className="whitespace-nowrap text-sm font-bold">
-            scroll down
-          </span>
-        </div>
-        <div className="flex items-center justify-center lg:justify-between py-24 w-[100%] lg:w[50%]">
-          <div className="mr-4 lg:mr-24">
+      <section className="flex flex-col lg:flex-row items-center h-[90vh] w-full relative mb-16">
+        <Link to='#about_me'>
+          <div className="flex flex-col justify-center items-center mr-8 py-4 px-4 absolute bottom-0 right-0">
+            <BsArrowDown className="text-2xl font-bold" />
+            <span className="whitespace-nowrap text-sm font-bold">
+              scroll down
+            </span>
+          </div>
+        </Link>
+        <div className="flex items-center justify-center lg:justify-between py-12 lg:py-24 w-[100%] lg:w[50%]">
+          <div className="mr-8 lg:mr-24">
             <Link>
-              <BsLinkedin className="mb-4 text-2xl" />
+              <BsLinkedin className="mb-4 text lg:text-2xl" />
             </Link>
             <Link>
-              <BsGithub className="mb-4 text-2xl" />
+              <BsGithub className="mb-4 text lg:text-2xl" />
             </Link>
             <Link>
-              <RiTwitterXLine className="mb-4 text-2xl" />
+              <RiTwitterXLine className="mb-4 text lg:text-2xl" />
             </Link>
             <Link>
-              <SiHashnode className="mb-4 text-2xl" />
+              <SiHashnode className="mb-4 text lg:text-2xl" />
             </Link>
           </div>
 
           <div className="">
-            <h1 className="text-4xl font-bold whitespace-nowrap mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold whitespace-break-spaces lg:whitespace-nowrap mb-8">
               Victor Ojedeji Here 👋
             </h1>
 
             <h3 className="text-2xl">Software Developer</h3>
             <p className="text-base">Passionate Frontend Web Developer </p>
-            <button className="bg-neutral-700 text-white mt-4 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
-              <span className="text-md">Hire me</span>
-              <BsArrowUpRight />
-            </button>
+            <Link to="#contact">
+              <button className="bg-neutral-700 text-white mt-4 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
+                <span className="text-md">Hire me</span>
+                <BsArrowUpRight />
+              </button>
+            </Link>
           </div>
         </div>
 
-        <div className="w-[50%] flex justify-end items-center">
+        <div className="w-[100%] lg:w-[50%] flex justify-center lg:justify-end items-center"  >
           <div
             className="w-[250px] h-[250px] rounded-full flex items-center justify-center bg-cover bg-center border-4 border-neutral-500"
             style={{
@@ -76,9 +80,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="h-[80vh] mb-24">
+      <section className="mb-24" id='about_me'>
         <div>
-          <h1 className="text-4xl font-bold whitespace-nowrap text-center">
+          <h1 className="text-3xl md:text-4xl font-bold whitespace-nowrap text-center">
             About Me
           </h1>
           <p className="text-sm font-normal text-gray-500 text-center">
@@ -86,12 +90,12 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="mt-16 w-full flex items-center">
-          <div className="relative w-[200px] h-[300px] overflow-hidden mr-24">
+        <div className="mt-16 w-full flex flex-col lg:flex-row items-center justify-center lg:justify-start">
+          <div className="relative w-full lg:w-[40%] h-full overflow-hidden mb-4 lg:mb-0 lg:mr-24 flex justify-center items-center ">
             <img
               src={profilePic}
               alt="Victor Ojedeji"
-              className="w-full h-full object-cover"
+              className="object-cover w-[200px] h-[300px]"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-50 cursor-pointer transition-all duration-300">
               {/* <div className="hidden group-hover:block text-black text-center relative z-10">
@@ -100,8 +104,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="w-[60%]">
-            <p className="text-sm">
+          <div className="w-full lg:w-[60%]">
+            <p className="text-md lg:text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
               ipsum est vitae at aliquam vel necessitatibus quasi vero veritatis
               assumenda laborum? Nulla dolorem animi numquam! Suscipit expedita
@@ -109,10 +113,12 @@ export default function HomePage() {
               Repellat dolor amet minus optio? Unde ad facilis illo vel fuga
               temporibus blanditiis repellat.
             </p>
-            <button className="bg-neutral-700 text-white mt-8 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
-              <span className="text-md">Check out my github</span>
-              <BsGithub />
-            </button>
+            <Link to="">
+              <button className="bg-neutral-700 text-white mt-8 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
+                <span className="text-md">Check out my github</span>
+                <BsGithub />
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -129,13 +135,13 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      <section className="mb-24">
+      <section className="mb-24 ">
         <h1 className="text-4xl font-bold whitespace-nowrap text-center">
           Skills
         </h1>
 
-        <div className="flex items-center justify-center mt-16 gap-8">
-          <div className="w-[50%] py-4 px-4 rounded-[8px] h-[60vh]">
+        <div className="flex flex-col lg:flex-row items-center justify-center mt-16 lg:gap-8">
+          <div className="w-[100%] lg:w-[50%] py-4 px-4 rounded-[8px] lg:h-[60vh]">
             <div>
               <h2 className="text-center text-2xl">Soft Skills</h2>
             </div>
@@ -198,7 +204,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="w-[50%] py-4 px-4 rounded-[8px] h-[60vh]">
+          <div className="w-[100%] lg:w-[50%] py-4 px-4 rounded-[8px] lg:h-[60vh]">
             <div>
               <h2 className="text-center text-2xl">Technical Skills</h2>
             </div>
@@ -247,7 +253,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full pb-16">
+      <section className="w-full pb-16" id="contact">
         <h1 className="text-4xl font-bold whitespace-nowrap text-center">
           Get in Touch
         </h1>
@@ -255,8 +261,8 @@ export default function HomePage() {
           Contact Me
         </h5>
 
-        <div className="w-full flex gap-8 mt-16">
-          <div className="w-[50%]">
+        <div className="w-full flex-col lg:flex-row gap-8 mt-16">
+          <div className="w-[100%] lg:w-[50%]">
             <h3 className="text-center text-2xl">Talk to me</h3>
 
             <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
@@ -268,7 +274,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
-              <BiLogoGmail  className="text-3xl font-bold" />
+              <BiLogoGmail className="text-3xl font-bold" />
               <div>
                 <h4 className="tex-xl font-bold">Email</h4>
                 <p className="text-base">ojedejivictordaniel@gmail.com</p>
@@ -276,7 +282,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
-              <BsWhatsapp  className="text-3xl font-bold" />
+              <BsWhatsapp className="text-3xl font-bold" />
               <div>
                 <h4 className="tex-xl font-bold">whatsApp</h4>
                 <p className="text-base">+234 812 653 6440</p>
@@ -284,7 +290,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="w-[50%]">
+          <div className="w-[100%] lg:w-[50%]">
             <h3 className="text-center text-2xl">Send me a proposal</h3>
 
             <form class="max-w-md mx-auto mt-4 p-4 rounded-lg">

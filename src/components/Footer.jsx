@@ -13,7 +13,7 @@ export default function Footer() {
         <li>Portfolio</li>
       </ul>
 
-      <BiSolidUpArrow className='absolute bottom-8 right-48'/>
+      <BiSolidUpArrow className='absolute bottom-8 right-8 lg:right-48'/>
     </footer>
   )
 }
