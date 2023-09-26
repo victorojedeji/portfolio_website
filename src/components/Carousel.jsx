@@ -44,13 +44,13 @@ const Carousel = () => {
             <div className="mt-4">
               <a
                 href={projects[currentIndex].githubUrl}
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline cursor-pointer"
               >
                 GitHub
               </a>
               <a
                 href={projects[currentIndex].websiteUrl}
-                className="ml-4 text-blue-500 hover:underline"
+                className="ml-4 text-blue-500 hover:underline cursor-pointer"
               >
                 Website
               </a>

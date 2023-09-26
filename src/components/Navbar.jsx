@@ -32,19 +32,19 @@ export default function Navbar() {
 
       <ul className="hidden  lg:flex lg:items-center lg:ml-auto lg:gap-8 lg:capitalize">
         <HLink to="#hero">
-          <li>Home</li>
+          <li className="cursor-pointer">Home</li>
         </HLink>
         <HLink to="#about_me">
-          <li>About</li>
+          <li className="cursor-pointer">About</li>
         </HLink>
         <HLink to="#portfolio">
-          <li>Portfolio</li>
+          <li className="cursor-pointer">Portfolio</li>
         </HLink>
         <HLink to="#skills">
-          <li>skills</li>
+          <li className="cursor-pointer">skills</li>
         </HLink>
         <HLink to="#contact">
-          <li>Contact</li>
+          <li className="cursor-pointer">Contact</li>
         </HLink>
       </ul>
 
@@ -60,19 +60,19 @@ export default function Navbar() {
             />
             <ul className="capitalize">
               <HLink to="#hero">
-                <li className="mb-4 text-3xl">Home</li>
+                <li className="mb-4 text-3xl cursor-pointer">Home</li>
               </HLink>
               <HLink to="#about_me">
-                <li className="mb-4 text-3xl">About</li>
+                <li className="mb-4 text-3xl cursor-pointer">About</li>
               </HLink>
               <HLink to="#portfolio">
-                <li className="mb-4 text-3xl">Portfolio</li>
+                <li className="mb-4 text-3xl cursor-pointer">Portfolio</li>
               </HLink>
               <HLink to="#skills">
-                <li className="mb-4 text-3xl">skills</li>
+                <li className="mb-4 text-3xl cursor-pointer">skills</li>
               </HLink>
               <HLink to="#contact">
-                <li className="mb-4 text-3xl">Contact</li>
+                <li className="mb-4 text-3xl cursor-pointer">Contact</li>
               </HLink>
             </ul>
           </div>
