@@ -25,23 +25,27 @@ import { BiLogoGmail, BiLogoReact } from "react-icons/bi";
 import { FaBootstrap } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
-import {HashLink as HLink} from 'react-router-hash-link'
+import { HashLink as HLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
-
 export default function HomePage() {
-
   const scrollDown = () => {
     window.scrollTo({
-      behavior: 'smooth'
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section className="px-8 md:px-48 bg-neutral-100">
-      <section className="flex flex-col lg:flex-row items-center h-[90vh] w-full relative mb-16" id="hero">
-        <HLink to='#about_me'>
-          <div className="flex flex-col justify-center items-center mr-8 py-4 px-4 absolute bottom-0 right-0" onClick={scrollDown}>
+      <section
+        className="flex flex-col lg:flex-row items-center h-[90vh] w-full relative mb-16"
+        id="hero"
+      >
+        <HLink to="#about_me">
+          <div
+            className="flex flex-col justify-center items-center mr-8 py-4 px-4 absolute bottom-0 right-0"
+            onClick={scrollDown}
+          >
             <BsArrowDown className="text-2xl font-bold" />
             <span className="whitespace-nowrap text-sm font-bold">
               scroll down
@@ -80,7 +84,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="w-[100%] lg:w-[50%] flex justify-center lg:justify-end items-center"  >
+        <div className="w-[100%] lg:w-[50%] flex justify-center lg:justify-end items-center">
           <div
             className="w-[250px] h-[250px] rounded-full flex items-center justify-center bg-cover bg-center border-4 border-neutral-500"
             style={{
@@ -90,7 +94,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mb-24" id='about_me'>
+      <section className="mb-24" id="about_me">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold whitespace-nowrap text-center">
             About Me
@@ -116,12 +120,18 @@ export default function HomePage() {
 
           <div className="w-full lg:w-[60%]">
             <p className="text-md lg:text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
-              ipsum est vitae at aliquam vel necessitatibus quasi vero veritatis
-              assumenda laborum? Nulla dolorem animi numquam! Suscipit expedita
-              et autem porro fugit, asperiores velit nihil tenetur possimus?
-              Repellat dolor amet minus optio? Unde ad facilis illo vel fuga
-              temporibus blanditiis repellat.
+              👋I'm a Frontend Developer who excels at transforming concepts
+              into user-friendly websites and applications. My expertise
+              includes utilizing JavaScript, React, HTML, and CSS to craft
+              visually appealing and highly functional websites. I can also
+              incorporate backend features into your site using technologies
+              like Firebase and Sanity.io. Before diving into professional
+              development, I am currently pursuing a Bachelor's degree in
+              Building at Obafemi Awolowo University.
+              <br />
+              📨 I'm enthusiastic about networking with fellow professionals,
+              joining forces on creative endeavors, and making meaningful
+              contributions to the continuously evolving technology industry.
             </p>
             <Link to="">
               <button className="bg-neutral-700 text-white mt-8 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
@@ -133,17 +143,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* <section id='portfolio'>
+      <section id="portfolio">
         <div>
           <h1 className="text-4xl font-bold whitespace-nowrap text-center">
             Portfolio
           </h1>
 
-          <div>
-
-          </div>
+          <div></div>
         </div>
-      </section> */}
+      </section>
 
       <section className="mb-24 " id="skills">
         <h1 className="text-4xl font-bold whitespace-nowrap text-center">
