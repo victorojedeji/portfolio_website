@@ -19,7 +19,7 @@ export default function Footer() {
       </ul>
 
       <HLink to="#hero">
-        <BiSolidUpArrow className="absolute bottom-8 right-8 lg:right-48" />
+        <BiSolidUpArrow className="absolute bottom-8 right-8 lg:right-48 text-2xl" />
       </HLink>
     </footer>
   );

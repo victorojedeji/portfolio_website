@@ -1,3 +1,5 @@
+import emailjs from "@emailjs/browser";
+
 import {
   BsLinkedin,
   BsGithub,
@@ -18,33 +20,65 @@ import {
   BiLogoRedux,
 } from "react-icons/bi";
 import { BiLogoGmail, BiLogoReact } from "react-icons/bi";
-import { FaBootstrap } from "react-icons/fa";
+import { FaBootstrap, FaTelegramPlane } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
 import profileAvatar from "../../assets/profile_gif.gif";
 import profilePic from "../../assets/profile_pic.jpg";
 
 import { HashLink as HLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel";
+import { useState } from "react";
+import { Ring } from "@uiball/loaders";
+import {toast} from 'react-hot-toast'
+
+
+
+
 
 export default function HomePage() {
-  const scrollDown = () => {
-    window.scrollTo({
-      behavior: "smooth",
-    });
+  emailjs.init("o3diX2wH7ru5vtq1X");
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [project, setProject] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    const templateParams = {
+      name,
+      email,
+      project,
+    };
+
+    try {
+      await emailjs.send("service_m1r2e53", "template_n3j8txc", templateParams);
+      setLoading(false);
+      toast.success("Your email has been sent successfully!");
+      setEmail("");
+      setName("");
+      setProject("");
+    } catch (error) {
+      setLoading(false);
+      toast.error(
+        "There was an error sending your email. Please try again later."
+      );
+    }
   };
 
   return (
     <section className="px-8 md:px-48 bg-neutral-100">
       <section
-        className="flex flex-col lg:flex-row items-center justify-center h-[80vh] w-full relative mb-16"
+        className="flex flex-col lg:flex-row items-center justify-center h-[100vh] w-full relative mb-16"
         id="hero"
       >
         <HLink to="#about_me">
           <div
             className="flex flex-col justify-center items-center mr-8 py-4 px-4 absolute bottom-0 right-0"
-            onClick={scrollDown}
           >
             <BsArrowDown className="text-2xl font-bold" />
             <span className="whitespace-nowrap text-sm font-bold">
@@ -54,16 +88,32 @@ export default function HomePage() {
         </HLink>
         <div className="flex items-center justify-center lg:justify-between py-12 lg:py-24 w-[100%] lg:w[50%]">
           <div className="mr-8 lg:mr-24">
-            <a href="https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav" target="_blank">
+            <a
+              href="https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav"
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsLinkedin className="mb-4 text lg:text-2xl" />
             </a>
-            <a href="https://github.com/victorojedeji" target="_blank">
+            <a
+              href="https://github.com/victorojedeji"
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsGithub className="mb-4 text lg:text-2xl" />
             </a>
-            <a href="https://twitter.com/Hack_Bishop" target="_blank">
+            <a
+              href="https://twitter.com/Hack_Bishop"
+              target="_blank"
+              rel="noreferrer"
+            >
               <RiTwitterXLine className="mb-4 text lg:text-2xl" />
             </a>
-            <a href="https://hashnode.com/@t0mi" target="_blank">
+            <a
+              href="https://hashnode.com/@t0mi"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SiHashnode className="mb-4 text lg:text-2xl" />
             </a>
           </div>
@@ -76,9 +126,9 @@ export default function HomePage() {
             <h3 className="text-2xl">Software Developer</h3>
             <p className="text-base">Passionate Frontend Web Developer </p>
             <HLink to="#contact">
-              <button className="bg-neutral-700 text-white mt-4 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
-                <span className="text-md">Hire me</span>
-                <BsArrowUpRight />
+              <button className="bg-neutral-700 hover:bg-neutral-800 duration-300 text-white mt-4 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
+                <span className="text-xl">Hire me</span>
+                <BsArrowUpRight className="text-2xl" />
               </button>
             </HLink>
           </div>
@@ -119,7 +169,7 @@ export default function HomePage() {
           </div>
 
           <div className="w-full lg:w-[60%]">
-            <p className="text-md lg:text-sm">
+            <p className="text-md lg:text-sm leading-6">
               👋I'm a Frontend Developer who excels at transforming concepts
               into user-friendly websites and applications. My expertise
               includes utilizing JavaScript, React, HTML, and CSS to craft
@@ -129,16 +179,21 @@ export default function HomePage() {
               development, I am currently pursuing a Bachelor's degree in
               Building at Obafemi Awolowo University.
               <br />
+              <br />
               📨 I'm enthusiastic about networking with fellow professionals,
               joining forces on creative endeavors, and making meaningful
               contributions to the continuously evolving technology industry.
             </p>
-            <Link to="">
-              <button className="bg-neutral-700 text-white mt-8 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
-                <span className="text-md">Check out my github</span>
-                <BsGithub />
+            <a
+              href="https://github.com/victorojedeji"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="bg-neutral-700 hover:bg-neutral-800 duration-300 text-white mt-8 px-8 py-2 rounded-[8px] whitespace-nowrap flex items-center gap-2 ">
+                <span className="text-xl">Check out my github</span>
+                <BsGithub className="text-2xl" />
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -163,7 +218,7 @@ export default function HomePage() {
         <div className="flex flex-col lg:flex-row items-center justify-center mt-16 lg:gap-8">
           <div className="w-[100%] lg:w-[50%] py-4 px-4 rounded-[8px] lg:h-[60vh]">
             <div>
-              <h2 className="text-center text-2xl">Soft Skills</h2>
+              <h2 className="text-center text-2xl">Technical Skills</h2>
             </div>
 
             <div className="flex flex-wrap mt-8 gap-3 justify-center">
@@ -226,7 +281,7 @@ export default function HomePage() {
 
           <div className="w-[100%] lg:w-[50%] py-4 px-4 rounded-[8px] lg:h-[60vh]">
             <div>
-              <h2 className="text-center text-2xl">Technical Skills</h2>
+              <h2 className="text-center text-2xl">Soft Skills</h2>
             </div>
 
             <div className="flex flex-wrap mt-8 gap-3 justify-center">
@@ -285,74 +340,113 @@ export default function HomePage() {
           <div className="w-[100%] lg:w-[50%]">
             <h3 className="text-center text-2xl">Talk to me</h3>
 
-            <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
-              <RiUserLocationLine className="text-3xl font-bold" />
-              <div>
-                <h4 className="tex-xl font-bold">Location</h4>
-                <p className="text-base">Ibadan | Nigeria.</p>
+            <a
+              href="https://www.google.com/maps?q=Ibadan%2C+Nigeria"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
+                <RiUserLocationLine className="text-3xl font-bold" />
+                <div>
+                  <h4 className="tex-xl font-bold">Location</h4>
+                  <p className="text-base">Ibadan | Nigeria.</p>
+                </div>
               </div>
-            </div>
+            </a>
 
-            <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
-              <BiLogoGmail className="text-3xl font-bold" />
-              <div>
-                <h4 className="tex-xl font-bold">Email</h4>
-                <p className="text-base">ojedejivictordaniel@gmail.com</p>
+            <a href="mailto:ojedejivictordaniel@gmail.com">
+              <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
+                <BiLogoGmail className="text-3xl font-bold" />
+                <div>
+                  <h4 className="tex-xl font-bold">Email</h4>
+                  <p className="text-base">ojedejivictordaniel@gmail.com</p>
+                </div>
               </div>
-            </div>
+            </a>
 
-            <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
-              <BsWhatsapp className="text-3xl font-bold" />
-              <div>
-                <h4 className="tex-xl font-bold">whatsApp</h4>
-                <p className="text-base">+234 812 653 6440</p>
+            <a
+              href="https://wa.me/2348126536440"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center gap-8 hover:bg-neutral-200 duration-300 py-2 px-4 rounded-[8px] mt-8 mb-4">
+                <BsWhatsapp className="text-3xl font-bold" />
+                <div>
+                  <h4 className="tex-xl font-bold">WhatsApp</h4>
+                  <p className="text-base">+234 812 653 6440</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
 
           <div className="w-[100%] lg:w-[50%]">
             <h3 className="text-center text-2xl">Send me a proposal</h3>
 
-            <form class="max-w-md mx-auto mt-4 p-4 rounded-lg">
-              <div class="mb-4 relative">
-                <label class=" mb-2" for="name">
+            <form
+              className="max-w-md mx-auto mt-4 p-4 rounded-lg"
+              onSubmit={handleSubmit}
+            >
+              <div className="mb-4 relative">
+                <label className=" mb-2" htmlFor="name">
                   Name
                 </label>
                 <input
-                  class="w-full py-2 px-3 border border-gray-300 rounded bg-transparent focus:outline-none"
+                  className="w-full py-2 px-3 border border-gray-300 rounded bg-transparent focus:outline-none"
                   type="text"
                   name="name"
                   id="name"
                   placeholder="Enter Your Name..."
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
 
-              <div class="mb-4 relative">
-                <label class=" mb-2" for="email">
+              <div className="mb-4 relative">
+                <label className=" mb-2" htmlFor="email">
                   Email
                 </label>
                 <input
-                  class="w-full py-2 px-3 border border-gray-300 rounded bg-transparent focus:outline-none"
+                  className="w-full py-2 px-3 border border-gray-300 rounded bg-transparent focus:outline-none"
                   type="email"
                   name="email"
                   id="email"
                   placeholder="Enter Your Email..."
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
-              <div class="mb-4 relative">
-                <label class=" mb-2" for="project">
+              <div className="mb-4 relative">
+                <label className=" mb-2" htmlFor="project">
                   Proposal
                 </label>
                 <textarea
-                  class="w-full py-2 px-3 border border-gray-300 rounded bg-transparent focus:outline-none resize-none"
+                  className="w-full py-2 px-3 border border-gray-300 rounded bg-transparent focus:outline-none resize-none"
                   name="project"
                   id="project"
                   cols="30"
                   rows="10"
-                  placeholder="Write Me Your Proposal..."
+                  placeholder="Write Your Proposal..."
+                  value={project}
+                  onChange={(e) => setProject(e.target.value)}
                 ></textarea>
               </div>
+
+              <button
+                type="submit"
+                className="border-2 border-neutral-700 rounded-[8px] bg-neutral-700 hover:bg-neutral-800 duration-300"
+              >
+                {loading ? (
+                  <div className="text-white flex items-center py-2 px-8 gap-2">
+                    <Ring color="#ffffff" className='text-white' size={20} />
+                  </div>
+                ) : (
+                  <div className="text-white flex items-center py-2 px-4 gap-2">
+                    <span className="text-xl">Send</span>
+                    <FaTelegramPlane className="text-3xl" />
+                  </div>
+                )}
+              </button>
             </form>
           </div>
         </div>

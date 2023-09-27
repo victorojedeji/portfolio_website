@@ -16,18 +16,22 @@ export default function Navbar() {
     setIsNavOpen(false);
   };
 
+
+
   return (
-    <header className="w-full min-h-[80px] flex items-center px-8 md:px-48 py-2">
+    <header className="w-full min-h-[80px] flex items-center px-8 md:px-48 py-2 fixed top-0 left-0 bg-white  z-100" style={{zIndex: 100}}>
       {/* <img src="" alt="Victor ojedeji" /> */}
       <h1 className="flex items-center font-bold">
         Victor <span className="ml-2">Ojedeji</span>.
       </h1>
 
       <div className="flex items-center ml-auto">
-        <RxHamburgerMenu
-          className="lg:hidden block text-3xl"
-          onClick={toggleNav}
-        />
+        {!isNavOpen && (
+          <RxHamburgerMenu
+            className="lg:hidden block text-3xl"
+            onClick={toggleNav}
+          />
+        )}
       </div>
 
       <ul className="hidden  lg:flex lg:items-center lg:ml-auto lg:gap-8 lg:capitalize">
@@ -60,19 +64,19 @@ export default function Navbar() {
             />
             <ul className="capitalize">
               <HLink to="#hero">
-                <li className="mb-4 text-3xl cursor-pointer">Home</li>
+                <li className="mb-16 text-3xl cursor-pointer" onClick={closeNav}>Home</li>
               </HLink>
               <HLink to="#about_me">
-                <li className="mb-4 text-3xl cursor-pointer">About</li>
+                <li className="mb-16 text-3xl cursor-pointer" onClick={closeNav}>About</li>
               </HLink>
               <HLink to="#portfolio">
-                <li className="mb-4 text-3xl cursor-pointer">Portfolio</li>
+                <li className="mb-16 text-3xl cursor-pointer" onClick={closeNav}>Portfolio</li>
               </HLink>
               <HLink to="#skills">
-                <li className="mb-4 text-3xl cursor-pointer">skills</li>
+                <li className="mb-16 text-3xl cursor-pointer" onClick={closeNav}>skills</li>
               </HLink>
               <HLink to="#contact">
-                <li className="mb-4 text-3xl cursor-pointer">Contact</li>
+                <li className="mb-16 text-3xl cursor-pointer" onClick={closeNav}>Contact</li>
               </HLink>
             </ul>
           </div>

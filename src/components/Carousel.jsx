@@ -51,6 +51,7 @@ const Carousel = () => {
               <a
                 href={projects[currentIndex].websiteUrl}
                 target="_blank"
+                rel='noreferrer'
                 className="ml-4 text-blue-500 hover:underline cursor-pointer"
               >
                 Website
