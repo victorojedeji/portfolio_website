@@ -10,7 +10,7 @@ import {
   BsGit,
   BsWordpress,
 } from "react-icons/bs";
-import { RiTwitterXLine, RiUserLocationLine } from "react-icons/ri";
+import { RiTeamFill, RiTwitterXLine, RiUserLocationLine } from "react-icons/ri";
 import { SiHashnode } from "react-icons/si";
 import { AiFillHtml5 } from "react-icons/ai";
 import {
@@ -18,10 +18,17 @@ import {
   BiLogoJavascript,
   BiLogoTailwindCss,
   BiLogoRedux,
+  BiLogoFirebase,
 } from "react-icons/bi";
 import { BiLogoGmail, BiLogoReact } from "react-icons/bi";
-import { FaBootstrap, FaTelegramPlane } from "react-icons/fa";
+import { FaBootstrap, FaRegFileCode, FaTeamspeak, FaTelegramPlane } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
+import { IoCreateSharp } from "react-icons/io5";
+import { MdManageAccounts, MdManageHistory } from "react-icons/md";
+import { LuBrainCircuit } from "react-icons/lu";
+
+
+
 
 import profileAvatar from "../../assets/profile_gif.gif";
 import profilePic from "../../assets/profile_pic.jpg";
@@ -222,59 +229,64 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-wrap mt-8 gap-3 justify-center">
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <AiFillHtml5 className="text-2xl" />
                 <span className="text-sm font-semibold">HTML5</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <BiLogoCss3 className="text-2xl" />
                 <span className="text-sm font-semibold">CSS3</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <BiLogoJavascript className="text-2xl" />
                 <span className="text-sm font-semibold">JAVASCRIPT</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <BsFiletypeScss className="text-2xl" />
                 <span className="text-sm font-semibold">SCSS</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <FaBootstrap className="text-2xl" />
                 <span className="text-sm font-semibold">BOOTSTRAP</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <BsGit className="text-2xl" />
                 <span className="text-sm font-semibold">GIT</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <BiLogoReact className="text-2xl" />
                 <span className="text-sm font-semibold">REACT</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <BiLogoTailwindCss className="text-2xl" />
                 <span className="text-sm font-semibold">TAILWINDCSS</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <BiLogoRedux className="text-2xl" />
                 <span className="text-sm font-semibold">REDUX TOOLKIT</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <TbBrandNextjs className="text-2xl" />
                 <span className="text-sm font-semibold">NEXTJS</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
                 <BsWordpress className="text-2xl" />
                 <span className="text-sm font-semibold">WORDPRESS</span>
+              </div>
+
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
+                <BiLogoFirebase className="text-2xl" />
+                <span className="text-sm font-semibold">FIREBASE</span>
               </div>
             </div>
           </div>
@@ -285,42 +297,42 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-wrap mt-8 gap-3 justify-center">
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
-                {/* <AiFillHtml5 className="text-2xl" /> */}
-                <span className="text-sm font-semibold">TIME MANAGEMENT</span>
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
+                <MdManageAccounts className="text-2xl" />
+                <span className="text-sm font-semibold">PROJECT MANAGEMENT</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
-                {/* <BiLogoCss3 className="text-2xl" /> */}
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
+                <FaTeamspeak className="text-2xl" />
                 <span className="text-sm font-semibold">
                   COMMUNICATION SKILLS
                 </span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
-                {/* <BiLogoJavascript className="text-2xl" /> */}
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
+                <MdManageHistory className="text-2xl" />
                 <span className="text-sm font-semibold">
-                  PROJECT MANAGEMENT
+                TIME MANAGEMENT
                 </span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
-                {/* <BsFiletypeScss className="text-2xl" /> */}
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
+                <LuBrainCircuit className="text-2xl" />
                 <span className="text-sm font-semibold">PROBLEM SOLVING</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
-                {/* <FaBootstrap className="text-2xl" /> */}
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
+                <RiTeamFill className="text-2xl" />
                 <span className="text-sm font-semibold">TEAMWORK</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
-                {/* <BsGit className="text-2xl" /> */}
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
+                <IoCreateSharp className="text-2xl" />
                 <span className="text-sm font-semibold">CREATIVITY</span>
               </div>
 
-              <div className="flex gap-4 items-center border-2 border-neutral-400 py-2 px-2 rounded-[8px]">
-                {/* <BiLogoReact className="text-2xl" /> */}
+              <div className="w-full bg-white border-white flex gap-4 items-center border-2 md:w-fit md:border-neutral-400 py-2 px-2 md:rounded-[8px]">
+                <FaRegFileCode className="text-2xl" />
                 <span className="text-sm font-semibold">PAIR PROGRAMMING</span>
               </div>
             </div>
@@ -398,6 +410,7 @@ export default function HomePage() {
                   placeholder="Enter Your Name..."
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  required
                 />
               </div>
 
@@ -413,6 +426,7 @@ export default function HomePage() {
                   placeholder="Enter Your Email..."
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
 
@@ -429,6 +443,7 @@ export default function HomePage() {
                   placeholder="Write Your Proposal..."
                   value={project}
                   onChange={(e) => setProject(e.target.value)}
+                  required
                 ></textarea>
               </div>
 
